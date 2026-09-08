@@ -1013,7 +1013,7 @@ body {
 .boxMail .boxMail-container .card2 .card2-content .imageCute2 img{
     width: 40px;
 }
-.boxMail .fa-xmark{
+ .boxMail .fa-xmark{
     position: fixed;
     top: 0;
     right: 0;
@@ -1022,274 +1022,124 @@ body {
     cursor: pointer;
     color: white;
     z-index: 10000000000000000;
-/* MOBILE CARD TEXT FIX */
+}
+
+/* =========================================
+   MOBILE / IPHONE FIX
+   ========================================= */
 @media screen and (max-width: 658px) {
 
-    .boxMail .boxMail-container .card2 h3{
-    font-family: 'Dancing Script', cursive;
-    padding: 20px 0px 10px 152px;
-    opacity: 1;
-    visibility: visible;
-    font-size: 25px;
-    text-shadow: 0 0 8px #FF7882;
-    } 
-
-    .boxMail .boxMail-container .card2 h2{
-    font-family: 'Dancing Script', cursive;
-    padding: 0px 20px;
-    text-indent: 20px;
-    font-size: 22px;
-    opacity: 1;
+    .boxMail.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: block !important;
     }
 
-}
-
-/* =========================================
-   BIRTHDAY MAIL CARD
-   FIXED FOR DESKTOP + IPHONE + ANDROID
-   ========================================= */
-
-.boxMail{
-    position: fixed;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0.3);
-    visibility: hidden;
-    transition: all 0.5s;
-    z-index: 100000000;
-}
-
-.boxMail.active{
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-}
-
-.boxMail .boxMail-container{
-    position: absolute;
-    width: 750px;
-    height: 500px;
-    display: flex;
-    margin: 0;
-    transform: scale(0.9);
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-    transition: all 0.8s ease-in-out;
-}
-
-.boxMail.active .boxMail-container{
-    transform: rotate(-5deg);
-    filter: drop-shadow(0 0 10px #FF7882);
-}
-
-.boxMail .boxMail-container .card1,
-.boxMail .boxMail-container .card2{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-}
-
-.boxMail .boxMail-container .card1{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, #FF7882, #FF7882 63%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 2;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all 1s ease-in-out;
-}
-
-.boxMail.active .boxMail-container .card1{
-    transform: translate(-187px, -250px) rotateY(-140deg);
-}
-
-.boxMail .boxMail-container .card1 .userImg{
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background-color: white;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid white;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.boxMail .boxMail-container .card1 .userImg img{
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.boxMail .boxMail-container .card1 h3{
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    text-transform: uppercase;
-    width: 80%;
-    text-align: center;
-    line-height: 1.5;
-    letter-spacing: 5px;
-    transform: rotate(-5deg);
-    text-shadow:
-        0 0 5px white,
-        0 0 10px white;
-}
-
-.boxMail .boxMail-container .card2{
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, #e0e0e0, #ffffff 30%);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all 1s;
-}
-
-.boxMail .boxMail-container .card2 .card2-content{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: #FF7882;
-    transition: all 1s;
-    overflow: hidden;
-    font-family: "Inter", serif;
-    color: #fff;
-}
-
-.boxMail.active .boxMail-container .card2-content{
-    transform: translate(20px, 20px);
-    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.4);
-}
-
-/* MESSAGE IS ALWAYS VISIBLE */
-.boxMail .boxMail-container .card2 h3{
-    font-family: 'Dancing Script', cursive;
-    padding: 20px 0 10px 152px;
-    opacity: 1;
-    visibility: visible;
-    font-size: 25px;
-    text-shadow: 0 0 8px #FF7882;
-}
-
-.boxMail .boxMail-container .card2 h2{
-    font-family: 'Dancing Script', cursive;
-    padding: 0 20px;
-    text-indent: 20px;
-    font-size: 22px;
-    line-height: 1.35;
-    opacity: 1;
-    visibility: visible;
-}
-
-.boxMail .boxMail-container .card2 .card2-content .imageCute2{
-    position: absolute;
-    top: 5px;
-    left: 100px;
-    opacity: 1;
-    transition: 1s;
-}
-
-.boxMail .boxMail-container .card2 .card2-content .imageCute2 img{
-    width: 40px;
-}
-
-.boxMail .fa-xmark{
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-size: 30px;
-    padding: 10px 25px;
-    cursor: pointer;
-    color: white;
-    z-index: 10000000000000000;
-}
-
-
-/* =========================================
-   MOBILE CARD
-   ========================================= */
-
-@media screen and (max-width: 658px){
-
-    .boxMail .boxMail-container{
-        width: 92vw;
-        height: 380px;
-        transform: scale(0.9);
+    .boxMail.active .boxMail-container {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        height: 430px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        margin: 0 !important;
+        display: block !important;
+        transform: translate(-50%, -50%) !important;
+        perspective: none !important;
+        -webkit-perspective: none !important;
     }
 
-    .boxMail.active .boxMail-container{
-        transform: rotate(-2deg);
+    /* On iPhone, show the message directly instead of relying on hover/3D flip. */
+    .boxMail.active .boxMail-container .card1 {
+        display: none !important;
     }
 
-    .boxMail .boxMail-container .card1{
-        width: 50%;
-        height: 100%;
+    .boxMail.active .boxMail-container .card2 {
+        position: absolute !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: 100% !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        background: #FF7882 !important;
+        border: 1px solid black !important;
+        z-index: 20 !important;
     }
 
-    .boxMail .boxMail-container .card1 .userImg{
-        width: 55px;
-        height: 55px;
-        margin-bottom: 10px;
+    .boxMail.active .boxMail-container .card2 .card2-content {
+        position: relative !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: 100% !important;
+        transform: none !important;
+        background: #FF7882 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        box-shadow: none !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
     }
 
-    .boxMail .boxMail-container .card1 h3{
-        font-size: 20px;
-        letter-spacing: 2px;
+    .boxMail.active .boxMail-container .card2 h3 {
+        display: block !important;
+        position: relative !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+        color: white !important;
+        font-size: 25px !important;
+        line-height: 1.2 !important;
+        padding: 0 0 15px 0 !important;
+        margin: 0 !important;
+        z-index: 100 !important;
     }
 
-    .boxMail .boxMail-container .card2{
-        width: 50%;
-        height: 100%;
+    .boxMail.active .boxMail-container .card2 h2 {
+        display: block !important;
+        position: relative !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+        color: white !important;
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-indent: 0 !important;
+        z-index: 100 !important;
     }
 
-    .boxMail .boxMail-container .card2 h3{
-        padding: 15px 0 8px 45px;
-        font-size: 19px;
-        opacity: 1;
-        visibility: visible;
+    .boxMail.active .boxMail-container .card2 .imageCute2 {
+        display: none !important;
     }
 
-    .boxMail .boxMail-container .card2 h2{
-        padding: 0 10px;
-        text-indent: 8px;
-        font-size: 13px;
-        line-height: 1.25;
-        opacity: 1;
-        visibility: visible;
+    /* Disable desktop hover behavior on touch devices. */
+    .boxMail .boxMail-container:hover {
+        transform: translate(-50%, -50%) !important;
+        filter: none !important;
     }
 
-    .boxMail .boxMail-container .card2 .card2-content .imageCute2{
-        top: 5px;
-        left: 20px;
-        opacity: 1;
+    .boxMail .boxMail-container:hover .card1 {
+        transform: none !important;
     }
 
-    .boxMail .boxMail-container .card2 .card2-content .imageCute2 img{
-        width: 28px;
+    .boxMail .boxMail-container:hover .card2-content {
+        transform: none !important;
+        box-shadow: none !important;
     }
 
-    .boxMail .fa-xmark{
-        font-size: 25px;
-        padding: 8px 15px;
+    .boxMail .boxMail-container .card2:hover h3,
+    .boxMail .boxMail-container .card2:hover h2 {
+        animation: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 }

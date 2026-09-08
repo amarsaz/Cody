@@ -1023,3 +1023,17 @@ body {
     color: white;
     z-index: 10000000000000000;
 }
+/* MOBILE FIX */
+@media screen and (max-width: 658px) {
+
+    .boxMail .boxMail-container .card2 h3 {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .boxMail .boxMail-container .card2 h2 {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}

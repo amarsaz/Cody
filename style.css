@@ -1022,18 +1022,21 @@ body {
     cursor: pointer;
     color: white;
     z-index: 10000000000000000;
-}
-/* MOBILE FIX */
+/* MOBILE CARD TEXT FIX */
 @media screen and (max-width: 658px) {
 
     .boxMail .boxMail-container .card2 h3 {
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
+        animation: none !important;
     }
 
     .boxMail .boxMail-container .card2 h2 {
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
+        animation: none !important;
     }
+
+}
 
 }
